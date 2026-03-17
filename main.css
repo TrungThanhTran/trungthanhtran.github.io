@@ -229,13 +229,14 @@ a:hover {
   padding: 2.5rem 0 2rem;
 }
 
-/* ── Photo (left) ── */
-.hero-photo {
+/* ── Left sidebar: avatar + identity ── */
+.hero-sidebar {
   flex-shrink: 0;
-  width: 200px;
+  width: 210px;
+  text-align: center;
 }
 
-.hero-photo img {
+.hero-avatar {
   width: 100%;
   border-radius: 50%;
   box-shadow: var(--card-shadow-hover);
@@ -243,54 +244,39 @@ a:hover {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: top;
+  margin-bottom: 1rem;
 }
 
-/* ── Bio (right) ── */
-.hero-bio {
-  flex: 1;
-  min-width: 0;
-}
-
-.hero-bio h1 {
-  font-size: 2.4rem;
+.hero-sidebar h1 {
+  font-size: 1.4rem;
   font-weight: 900;
-  letter-spacing: -0.01em;
   color: var(--text);
-  margin-bottom: 0.15rem;
-  line-height: 1.15;
+  margin-bottom: 0.1rem;
+  line-height: 1.2;
 }
 
 .hero-title {
-  font-size: 1.05rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 /* Affiliation list */
 .hero-affil {
   list-style: none;
   padding: 0;
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.75rem;
 }
 
 .hero-affil li {
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  padding: 0.18rem 0;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.hero-affil li i {
-  font-size: 0.78rem;
-  color: var(--accent);
-  flex-shrink: 0;
+  padding: 0.12rem 0;
 }
 
 .hero-affil li a {
-  color: var(--text);
+  color: var(--text-muted);
   font-weight: 600;
 }
 
@@ -301,39 +287,41 @@ a:hover {
 
 /* Contact line */
 .hero-contact {
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  word-break: break-all;
 }
 
 .hero-contact i {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--accent);
+  flex-shrink: 0;
 }
 
-/* Social links — horizontal chip row */
+/* Social links — vertical list */
 .hero-social {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1.4rem;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .hero-social a {
   color: var(--icon-color);
   font-size: 0.82rem;
   font-weight: 600;
-  padding: 0.28rem 0.7rem;
-  border-radius: 20px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
   border: 1.5px solid var(--border);
   transition: color 0.15s, background-color 0.15s, border-color 0.15s;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
+  gap: 0.4rem;
   text-decoration: none;
 }
 
@@ -343,11 +331,17 @@ a:hover {
   border-color: var(--accent);
 }
 
-/* About text */
-.hero-about p {
-  font-size: 0.96rem;
+/* ── Right: bio text ── */
+.hero-bio {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0.5rem;
+}
+
+.hero-bio p {
+  font-size: 0.97rem;
   color: var(--text);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
   line-height: 1.72;
 }
 
@@ -359,13 +353,10 @@ a:hover {
     gap: 1.5rem;
     padding-top: 1.5rem;
   }
-  .hero-photo {
-    width: 150px;
+  .hero-sidebar {
+    width: 170px;
   }
-  .hero-bio h1 {
-    font-size: 1.9rem;
-  }
-  .hero-social {
+  .hero-social a {
     justify-content: center;
   }
 }
