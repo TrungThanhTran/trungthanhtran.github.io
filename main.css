@@ -284,6 +284,30 @@ a:hover {
   display: block;
 }
 
+.hero-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.hero-social a {
+  color: var(--icon-color);
+  font-size: 1.25rem;
+  padding: 0.3rem 0.35rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-social a:hover {
+  color: var(--accent);
+  background-color: var(--tag-bg);
+  text-decoration: none;
+}
+
 /* Mobile: stack vertically */
 @media (max-width: 600px) {
   .hero-section {
