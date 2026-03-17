@@ -120,7 +120,7 @@ a:hover {
 }
 
 .navbar-brand {
-  font-size: 1.35rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--text) !important;
   letter-spacing: -0.02em;
@@ -371,6 +371,11 @@ a:hover {
 
 /* Mobile: stack vertically */
 @media (max-width: 640px) {
+  .navbar-brand {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
   .hero-section {
     flex-direction: column;
     align-items: center;
@@ -378,8 +383,9 @@ a:hover {
     padding-top: 1.5rem;
   }
   .hero-sidebar {
-    width: 170px;
+    width: min(220px, 60vw);
     position: static;
+    margin: 0 auto;
   }
   .hero-social a {
     justify-content: center;
