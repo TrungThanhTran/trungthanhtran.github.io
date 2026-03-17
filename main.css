@@ -225,15 +225,18 @@ a:hover {
 .hero-section {
   display: flex;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 3rem;
   padding: 2.5rem 0 2rem;
 }
 
-/* ── Left sidebar: avatar + identity ── */
+/* ── Left sidebar: avatar + identity (sticky) ── */
 .hero-sidebar {
   flex-shrink: 0;
-  width: 210px;
+  width: 200px;
   text-align: center;
+  position: sticky;
+  top: 1.5rem;
+  align-self: flex-start;
 }
 
 .hero-avatar {
@@ -331,18 +334,23 @@ a:hover {
   border-color: var(--accent);
 }
 
-/* ── Right: bio text ── */
+/* ── Right: bio + sections ── */
 .hero-bio {
   flex: 1;
   min-width: 0;
-  padding-top: 0.5rem;
+  padding-top: 0.25rem;
 }
 
-.hero-bio p {
+.hero-bio > p {
   font-size: 0.97rem;
   color: var(--text);
   margin-bottom: 0.9rem;
   line-height: 1.72;
+}
+
+/* Sections inside the right column */
+.content-section {
+  margin-top: 2rem;
 }
 
 /* Mobile: stack vertically */
@@ -355,6 +363,7 @@ a:hover {
   }
   .hero-sidebar {
     width: 170px;
+    position: static;
   }
   .hero-social a {
     justify-content: center;
@@ -384,7 +393,7 @@ a:hover {
 }
 
 /* ============================================================
-   NEWS SECTION
+   NEWS SECTION (legacy full-width — no longer used)
    ============================================================ */
 .news-section {
   margin: 2rem 0;
