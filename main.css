@@ -120,7 +120,7 @@ a:hover {
 }
 
 .navbar-brand {
-  font-size: 1.75rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: var(--text) !important;
   letter-spacing: -0.02em;
@@ -248,6 +248,7 @@ a:hover {
   object-fit: cover;
   object-position: top;
   margin-bottom: 1rem;
+  transform: rotate(6deg);
 }
 
 .hero-sidebar h1 {
@@ -369,26 +370,146 @@ a:hover {
   padding-top: 0.2rem;
 }
 
-/* Mobile: stack vertically */
-@media (max-width: 640px) {
-  .navbar-brand {
-    font-size: 2rem;
-    width: 100%;
-    text-align: center;
+/* ============================================================
+   RESPONSIVE — Tablet (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
+  .hero-section {
+    gap: 2rem;
+  }
+  .hero-sidebar {
+    width: 170px;
+  }
+  .publications-header h1,
+  .projects-header h1,
+  .post-title {
+    font-size: 1.6rem;
+  }
+  .content-section {
+    margin-top: 2rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile (≤ 640px)
+   ============================================================ */
+@media (max-width: 640px) {
+  /* Layout */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Navbar — center brand over profile photo on mobile */
+  #navbar .container {
+    position: relative;
+    justify-content: flex-end;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.2rem;
+    white-space: nowrap;
+  }
+
+  /* Hero */
   .hero-section {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    padding-top: 1.5rem;
+    gap: 1.25rem;
+    padding-top: 1.25rem;
   }
   .hero-sidebar {
     width: min(220px, 60vw);
     position: static;
     margin: 0 auto;
   }
+  .hero-sidebar h1 {
+    font-size: 1.3rem;
+  }
+  .hero-title {
+    font-size: 0.9rem;
+  }
+  .hero-affil li {
+    font-size: 0.88rem;
+    padding: 0.2rem 0;
+  }
+  .hero-contact {
+    font-size: 0.85rem;
+  }
   .hero-social a {
     justify-content: center;
+    padding: 0.55rem 0.75rem;  /* larger touch target */
+    font-size: 0.88rem;
+  }
+  .hero-bio > p {
+    font-size: 0.95rem;
+  }
+
+  /* Sections */
+  .content-section {
+    margin-top: 1.75rem;
+  }
+  .section-heading {
+    font-size: 1rem;
+  }
+
+  /* News: stack date + text vertically */
+  .news-item {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .news-date {
+    align-self: flex-start;
+    font-size: 0.78rem;
+  }
+
+  /* Publications */
+  .publications-header h1,
+  .projects-header h1,
+  .post-title {
+    font-size: 1.4rem;
+  }
+  .pub-venue {
+    font-size: 0.75rem;
+  }
+  .pub-title {
+    font-size: 0.95rem;
+  }
+  .pub-authors {
+    font-size: 0.85rem;
+  }
+  .pub-links a {
+    padding: 0.35rem 0.75rem;  /* larger touch target */
+    font-size: 0.82rem;
+  }
+
+  /* Projects */
+  .project-item {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 1.5rem 0;
+  }
+  .project-thumb {
+    width: 100%;
+  }
+  .project-thumb img {
+    height: 180px;
+  }
+  .project-title {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    margin-top: 2.5rem;
+    font-size: 0.82rem;
   }
 }
 
@@ -797,20 +918,6 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
-@media (max-width: 600px) {
-  .project-item {
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0;
-    padding: 1.5rem 0;
-  }
-  .project-thumb {
-    width: 100%;
-  }
-  .project-thumb img {
-    height: 160px;
-  }
-}
 
 /* ============================================================
    FOOTER
