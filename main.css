@@ -80,7 +80,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
@@ -225,110 +225,148 @@ a:hover {
 .hero-section {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 2.5rem;
   padding: 2.5rem 0 2rem;
 }
 
+/* ── Photo (left) ── */
+.hero-photo {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.hero-photo img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: var(--card-shadow-hover);
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* ── Bio (right) ── */
 .hero-bio {
   flex: 1;
   min-width: 0;
 }
 
 .hero-bio h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
   color: var(--text);
-  margin-bottom: 0.25rem;
-  line-height: 1.2;
+  margin-bottom: 0.15rem;
+  line-height: 1.15;
 }
 
-.hero-subtitle {
-  font-size: 1rem;
+.hero-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Affiliation list */
+.hero-affil {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+}
+
+.hero-affil li {
+  font-size: 0.92rem;
   color: var(--text-muted);
-  font-weight: 500;
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.01em;
+  padding: 0.18rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
 }
 
+.hero-affil li i {
+  font-size: 0.78rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-affil li a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero-affil li a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Contact line */
 .hero-contact {
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  margin-bottom: 1.25rem;
-  font-family: 'Roboto Mono', 'Courier New', monospace;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
-.hero-contact a {
-  color: var(--text-muted);
-}
-
-.hero-contact a:hover {
+.hero-contact i {
+  font-size: 0.8rem;
   color: var(--accent);
 }
 
-.hero-bio p {
-  font-size: 0.97rem;
-  color: var(--text);
-  margin-bottom: 0.85rem;
-}
-
-.hero-photo {
-  flex-shrink: 0;
-  width: 240px;
-}
-
-.hero-photo img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: var(--card-shadow-hover);
-  display: block;
-}
-
+/* Social links — horizontal chip row */
 .hero-social {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 0.85rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.4rem;
 }
 
 .hero-social a {
   color: var(--icon-color);
-  font-size: 0.85rem;
-  padding: 0.35rem 0.5rem;
-  border-radius: 6px;
-  border: 1px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.28rem 0.7rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
   transition: color 0.15s, background-color 0.15s, border-color 0.15s;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.35rem;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .hero-social a:hover {
   color: var(--accent);
   background-color: var(--tag-bg);
   border-color: var(--accent);
-  text-decoration: none;
 }
 
-.hero-social a .social-label {
-  font-size: 0.78rem;
-  font-weight: 500;
+/* About text */
+.hero-about p {
+  font-size: 0.96rem;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  line-height: 1.72;
 }
 
 /* Mobile: stack vertically */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .hero-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     padding-top: 1.5rem;
   }
   .hero-photo {
-    width: 180px;
-    margin: 0 auto;
+    width: 150px;
   }
   .hero-bio h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+  }
+  .hero-social {
+    justify-content: center;
   }
 }
 
