@@ -285,8 +285,8 @@ a:hover {
 }
 
 .hero-social {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 0.3rem;
   margin-top: 0.85rem;
 }
