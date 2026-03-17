@@ -284,6 +284,38 @@ a:hover {
   display: block;
 }
 
+.hero-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.85rem;
+}
+
+.hero-social a {
+  color: var(--icon-color);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+
+.hero-social a:hover {
+  color: var(--accent);
+  background-color: var(--tag-bg);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.hero-social a .social-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
 /* Mobile: stack vertically */
 @media (max-width: 600px) {
   .hero-section {
