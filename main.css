@@ -261,7 +261,7 @@ a:hover {
 .hero-title {
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--text-muted);
   margin-bottom: 0.8rem;
 }
 
@@ -350,6 +350,19 @@ a:hover {
   line-height: 1.72;
 }
 
+/* Bio links: no blue — underline highlight only */
+.hero-bio > p a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+}
+
+.hero-bio > p a:hover {
+  color: var(--text);
+  text-decoration-color: var(--text-muted);
+}
+
 /* Sections inside the right column */
 .content-section {
   margin-top: 2.8rem;
@@ -381,7 +394,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text);
   margin-bottom: 1.25rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--border);
