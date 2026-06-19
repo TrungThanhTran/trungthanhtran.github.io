@@ -479,8 +479,14 @@
   <!-- Dark Mode -->
   <script src="./js/dark_mode.js"></script>
 
-  <!-- Google Analytics: Replace UA-180825462-1 with your GA4 Measurement ID (G-XXXXXXX) -->
-  <!-- UA (Universal Analytics) was sunset July 2023 and no longer tracks visits. -->
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVFQHCHQHC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TVFQHCHQHC');
+  </script>
 
 </body>
 </html>
