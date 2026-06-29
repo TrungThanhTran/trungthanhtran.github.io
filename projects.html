@@ -98,30 +98,31 @@
         </p>
       </div>
 
-      <ul class="project-list">
+      <ul class="project-grid">
 
-        <!-- Agent Automation -->
-        <li class="project-item">
-          <div class="project-thumb" style="background:var(--bg-alt); display:flex; align-items:center; justify-content:center; height:105px;">
-            <i class="fas fa-robot" style="font-size:3rem; color:var(--accent); opacity:0.75;"></i>
+        <!-- Agent Automation — FEATURED -->
+        <li class="project-card project-card--featured">
+          <div class="project-card__cover project-card__cover--icon">
+            <i class="fas fa-robot"></i>
           </div>
-          <div class="project-body">
-            <div class="project-org">Personal · 2026–present</div>
-            <div class="project-title">
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Personal</span>
+              <span class="project-card__year">2026–present</span>
+            </div>
+            <div class="project-card__title">
               AI Agent Automation — Daily Workflow Engineering
             </div>
-            <div class="project-desc">
+            <div class="project-card__desc">
               A growing suite of AI agents that automate repetitive daily engineering and research tasks —
-              turning hours of manual work into seconds of autonomous execution. Agents handle tasks such as
+              turning hours of manual work into seconds of autonomous execution. Agents handle
               <strong>automated code review &amp; PR summarisation</strong>, <strong>literature monitoring</strong>
-              (daily ArXiv digest filtered by interest), <strong>meeting preparation</strong> (agenda generation,
-              pre-read summaries), <strong>data pipeline health checks</strong>, and
-              <strong>report drafting</strong> from raw experiment logs. Built with
-              multi-model orchestration using <strong>Claude Code</strong> and <strong>Gemini</strong>,
-              observability via <strong>Langfuse</strong>, and security guardrails covering
-              <strong>LLM security</strong> (prompt injection defence, output validation, audit logging).
+              (daily ArXiv digest), <strong>meeting preparation</strong>, <strong>data pipeline health checks</strong>, and
+              <strong>report drafting</strong> from raw experiment logs. Built with multi-model orchestration using
+              <strong>Claude Code</strong> and <strong>Gemini</strong>, observability via <strong>Langfuse</strong>,
+              and LLM security guardrails.
             </div>
-            <div class="project-tags">
+            <div class="project-card__tags">
               <span class="project-tag">Agentic AI</span>
               <span class="project-tag">Claude Code</span>
               <span class="project-tag">Gemini</span>
@@ -133,79 +134,81 @@
         </li>
 
         <!-- Fatima Fellowship -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/fatima.jpeg" alt="Fatima Fellowship">
           </div>
-          <div class="project-body">
-            <div class="project-org">Fatima Fellowship · 2024–present</div>
-            <div class="project-title">
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Fatima Fellowship</span>
+              <span class="project-card__year">2024–present</span>
+            </div>
+            <div class="project-card__title">
               <a href="https://www.fatimafellowship.com/" target="_blank">
                 Foundation Models on Edge Devices
               </a>
             </div>
-            <div class="project-desc">
-              LLMs range from a few GBs to hundreds of GBs — far exceeding the memory available on edge devices
-              with shared DRAM (CPU, GPU, and accelerators contending). Working with
-              <a href="https://ismetdagli.github.io" target="_blank">Dr. Ismet Dagli</a>
-              to develop efficient memory management mechanisms that eliminate bottlenecks and enable
-              LLMs / LVMs to run reliably on NVIDIA Jetson and similar edge hardware.
+            <div class="project-card__desc">
+              Developing efficient memory management mechanisms to eliminate bottlenecks and enable
+              LLMs / LVMs to run reliably on <strong>NVIDIA Jetson</strong> and similar edge hardware,
+              in collaboration with <a href="https://ismetdagli.github.io" target="_blank">Dr. Ismet Dagli</a>.
             </div>
-            <div class="project-tags">
+            <div class="project-card__tags">
               <span class="project-tag">Edge AI</span>
               <span class="project-tag">Foundation Models</span>
               <span class="project-tag">LLMs</span>
-              <span class="project-tag">Accelerated Computing</span>
               <span class="project-tag">NVIDIA Jetson</span>
             </div>
           </div>
         </li>
 
         <!-- TakeNote -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/TakeNote.png" alt="TakeNote.ai">
           </div>
-          <div class="project-body">
-            <div class="project-org">TakeNote.ai (Co-founder) · Oxford, UK</div>
-            <div class="project-title">
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">TakeNote.ai · Co-founder</span>
+              <span class="project-card__year">Oxford, UK</span>
+            </div>
+            <div class="project-card__title">
               <a href="https://takenote.ai/" target="_blank">TakeNote — AI Meeting Assistant</a>
             </div>
-            <div class="project-desc">
-              A voice AI product that empowers meeting secretaries with real-time transcription,
-              speaker diarization, content summarization, and semantic search — built on LLMs
-              and state-of-the-art audio processing research.
+            <div class="project-card__desc">
+              Voice AI product with real-time transcription, speaker diarization, content summarization,
+              and semantic search — built on LLMs and state-of-the-art audio processing research.
             </div>
-            <div class="project-tags">
+            <div class="project-card__tags">
               <span class="project-tag">LLMs</span>
               <span class="project-tag">Speech Recognition</span>
               <span class="project-tag">Speaker Diarization</span>
-              <span class="project-tag">NLP</span>
               <span class="project-tag">Generative AI</span>
             </div>
           </div>
         </li>
 
         <!-- ClientScan -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/ClientScan.png" alt="ClientScan">
           </div>
-          <div class="project-body">
-            <div class="project-org">ClientScan (CTO) · Oxford, UK</div>
-            <div class="project-title">
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">ClientScan · CTO</span>
+              <span class="project-card__year">Oxford, UK</span>
+            </div>
+            <div class="project-card__title">
               <a href="https://www.clientscan.co.uk/" target="_blank">
                 ClientScan — Enterprise Facial Recognition
               </a>
             </div>
-            <div class="project-desc">
-              Full-stack face recognition solution: cloud-based registration,
-              an extensive identity database, and on-edge inference.
-              Co-developed with <strong>Oxford University advisers</strong> — achieving
-              <strong>&gt;99.4% accuracy</strong>, <strong>30 FPS</strong>, and support for
-              <strong>&gt;10,000 identifiers</strong>. Deployed in hospitality and regulated gaming sectors.
+            <div class="project-card__desc">
+              Full-stack face recognition with <strong>&gt;99.4% accuracy</strong>, <strong>30 FPS</strong>,
+              and <strong>&gt;10,000 identifiers</strong>. Co-developed with Oxford University advisers.
+              Deployed in hospitality and regulated gaming sectors.
             </div>
-            <div class="project-tags">
+            <div class="project-card__tags">
               <span class="project-tag">Face Recognition</span>
               <span class="project-tag">Deep Learning</span>
               <span class="project-tag">Edge Inference</span>
@@ -215,21 +218,22 @@
         </li>
 
         <!-- Auto Review -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/autoreview.jpg" alt="Auto Review">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pixta Vietnam · 2023–2026</div>
-            <div class="project-title">Auto Review — AI-Powered Image Quality Assessment</div>
-            <div class="project-desc">
-              In-house framework that automates quality review for an image stock platform across
-              <strong>20+ quality standards</strong>, processing up to <strong>30,000 images/day</strong>
-              with a <strong>70% reduction in operational cost</strong> and <strong>99.5% precision</strong>.
-              Handles tiny object detection, domain diversity, and can substitute human reviewers
-              in well-defined decision scenarios.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Vietnam</span>
+              <span class="project-card__year">2023–2026</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">Auto Review — AI-Powered Image Quality Assessment</div>
+            <div class="project-card__desc">
+              Automated quality review across <strong>20+ quality standards</strong>, processing up to
+              <strong>30,000 images/day</strong> with a <strong>70% cost reduction</strong> and
+              <strong>99.5% precision</strong>.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Computer Vision</span>
               <span class="project-tag">Deep Learning</span>
               <span class="project-tag">Lightweight Models</span>
@@ -239,20 +243,21 @@
         </li>
 
         <!-- Image Generation -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/artai.jpg" alt="Image Generation">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pixta Vietnam · Nov 2022–2023</div>
-            <div class="project-title">AI Image Generation — Stable Diffusion for Stock Photography</div>
-            <div class="project-desc">
-              Adapted Stable Diffusion to generate commercial-grade stock photography via
-              fine-tuning, LoRA, and responsible-AI constraints.
-              Delivered a unified app supporting <strong>txt2img, img2img, inpaint, outpaint, upscale,
-              and image variation</strong> — all within a single optimized serving pipeline.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Vietnam</span>
+              <span class="project-card__year">Nov 2022–2023</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">AI Image Generation — Stable Diffusion for Stock Photography</div>
+            <div class="project-card__desc">
+              Adapted Stable Diffusion to generate commercial-grade stock photography via fine-tuning and LoRA.
+              Unified app supporting <strong>txt2img, img2img, inpaint, outpaint, upscale, and variation</strong>.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Stable Diffusion</span>
               <span class="project-tag">Generative AI</span>
               <span class="project-tag">LoRA Fine-tuning</span>
@@ -262,20 +267,22 @@
         </li>
 
         <!-- Learning to Rank -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/learning2rank.png" alt="Learning-to-Rank">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pixta Inc. · 2020–2022</div>
-            <div class="project-title">Learning-to-Rank — Search Re-Ranking System</div>
-            <div class="project-desc">
-              Built an ML re-ranking layer on top of PIXTA's search engine, trained on
-              <strong>billions of user interaction signals</strong>, resulting in a
-              <strong>~6% revenue increase (~$30,000/month)</strong>.
-              Deployed with full MLOps automation: data ingestion → training → evaluation → rollout.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Inc.</span>
+              <span class="project-card__year">2020–2022</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">Learning-to-Rank — Search Re-Ranking System</div>
+            <div class="project-card__desc">
+              ML re-ranking layer trained on <strong>billions of user signals</strong>, resulting in
+              a <strong>~6% revenue increase (~$30K/month)</strong>. Full MLOps automation from
+              data ingestion to rollout.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Information Retrieval</span>
               <span class="project-tag">LightGBM</span>
               <span class="project-tag">Active Learning</span>
@@ -285,67 +292,68 @@
         </li>
 
         <!-- Tag Suggestion -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/tagsuggestion.png" alt="Tag Suggestion">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pixta Vietnam · 2020–2022</div>
-            <div class="project-title">Tag Suggestion — Large-Scale Visual Auto-Annotation</div>
-            <div class="project-desc">
-              Multi-label classification model for <strong>25,000+ visual categories</strong>,
-              serving both user-facing tag suggestions and internal dataset annotation.
-              Evolved from ResNest (2020) → Meshed-Memory Transformer (2021) → pure
-              Vision Transformer, with training on 5M+ samples.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Vietnam</span>
+              <span class="project-card__year">2020–2022</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">Tag Suggestion — Large-Scale Visual Auto-Annotation</div>
+            <div class="project-card__desc">
+              Multi-label classification model for <strong>25,000+ visual categories</strong> trained on 5M+ samples.
+              Evolved from ResNest → Meshed-Memory Transformer → pure Vision Transformer.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Vision Transformer</span>
               <span class="project-tag">Multi-label Classification</span>
               <span class="project-tag">Auto-Annotation</span>
-              <span class="project-tag">ResNest</span>
             </div>
           </div>
         </li>
 
         <!-- Face Attribute -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/affectnet.png" alt="Face Attribute Recognition">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pixta Vietnam · 2020–2021</div>
-            <div class="project-title">Face Attribute Recognition — Age &amp; Emotion</div>
-            <div class="project-desc">
-              Multi-task model built on a large face recognition backbone, predicting
-              age and emotion while applying
-              <a href="https://caer-dataset.github.io/file/JiyoungLee_iccv2019_CAER-Net.pdf" target="_blank">context-aware recognition</a>
-              to fuse facial and scene-level features — significantly improving label quality
-              on a noisy, in-the-wild dataset.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Vietnam</span>
+              <span class="project-card__year">2020–2021</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">Face Attribute Recognition — Age &amp; Emotion</div>
+            <div class="project-card__desc">
+              Multi-task model predicting age and emotion using
+              <a href="https://caer-dataset.github.io/file/JiyoungLee_iccv2019_CAER-Net.pdf" target="_blank">context-aware recognition</a>
+              to fuse facial and scene-level features on a noisy, in-the-wild dataset.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Multi-task Learning</span>
               <span class="project-tag">Face Analysis</span>
-              <span class="project-tag">Context-Aware Recognition</span>
               <span class="project-tag">EfficientNet</span>
             </div>
           </div>
         </li>
 
         <!-- Face Recognition -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/facerecognition.png" alt="Face Recognition">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pixta Vietnam · 2019–2020</div>
-            <div class="project-title">Face Recognition — Unsupervised Identity Clustering</div>
-            <div class="project-desc">
-              Clustered <strong>hundreds of thousands of unlabeled face images</strong> to
-              automatically assign consistent identity labels, accelerating dataset
-              construction for downstream training. Overcame challenges including
-              extreme class count, varied attributes, non-human faces, and label noise.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Vietnam</span>
+              <span class="project-card__year">2019–2020</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">Face Recognition — Unsupervised Identity Clustering</div>
+            <div class="project-card__desc">
+              Clustered <strong>hundreds of thousands of unlabeled face images</strong> for automatic identity labeling,
+              overcoming extreme class count, attribute variety, and label noise.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Unsupervised Learning</span>
               <span class="project-tag">DBSCAN</span>
               <span class="project-tag">Face Recognition</span>
@@ -355,47 +363,48 @@
         </li>
 
         <!-- Sorgenia Chatbot -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/chatbot.png" alt="Sorgenia Voice Bot">
           </div>
-          <div class="project-body">
-            <div class="project-org">Pi School, Rome · 2018</div>
-            <div class="project-title">Sorgenia Voice Bot — Italy's First Energy-Sector Chatbot</div>
-            <div class="project-desc">
-              Built a proof-of-concept voice chatbot for
-              <a href="https://www.sorgenia.it/" target="_blank">Sorgenia</a>,
-              an innovative Italian energy company — the <strong>first voice bot in the energy sector in Italy</strong>.
-              Developed at <a href="https://picampus-school.com/" target="_blank">Pi School, Rome</a>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pi School, Rome</span>
+              <span class="project-card__year">2018</span>
+            </div>
+            <div class="project-card__title">Sorgenia Voice Bot — Italy's First Energy-Sector Chatbot</div>
+            <div class="project-card__desc">
+              The <strong>first voice bot in the energy sector in Italy</strong>, built for
+              <a href="https://www.sorgenia.it/" target="_blank">Sorgenia</a> at
+              <a href="https://picampus-school.com/" target="_blank">Pi School, Rome</a>
               using Dialogflow and custom NLU pipelines.
             </div>
-            <div class="project-tags">
+            <div class="project-card__tags">
               <span class="project-tag">Voice AI</span>
               <span class="project-tag">Dialogflow</span>
-              <span class="project-tag">Chatbot</span>
               <span class="project-tag">NLU</span>
             </div>
           </div>
         </li>
 
         <!-- Panasonic -->
-        <li class="project-item">
-          <div class="project-thumb">
+        <li class="project-card">
+          <div class="project-card__cover">
             <img src="./photos/conversationalsystem.png" alt="Panasonic Conversational System">
           </div>
-          <div class="project-body">
-            <div class="project-org">Panasonic R&amp;D Center Vietnam · 2017–2018</div>
-            <div class="project-title">Panasonic Core Conversational System</div>
-            <div class="project-desc">
-              Designed and built the core NLP platform for Panasonic smart devices —
-              covering speaker identification, speech recognition, wake-word detection,
-              and a multi-domain dialog system. Deployed in a pilot at a <strong>healthcare center
-              for elderly residents in Kyoto, Japan</strong>.
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Panasonic R&amp;D Center Vietnam</span>
+              <span class="project-card__year">2017–2018</span>
             </div>
-            <div class="project-tags">
+            <div class="project-card__title">Panasonic Core Conversational System</div>
+            <div class="project-card__desc">
+              Core NLP platform covering speaker identification, speech recognition, wake-word detection,
+              and multi-domain dialog. Piloted at a <strong>healthcare center for elderly residents in Kyoto, Japan</strong>.
+            </div>
+            <div class="project-card__tags">
               <span class="project-tag">Conversational AI</span>
               <span class="project-tag">Speaker Recognition</span>
-              <span class="project-tag">Speech Recognition</span>
               <span class="project-tag">Multi-domain NLU</span>
             </div>
           </div>
