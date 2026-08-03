@@ -2026,3 +2026,9 @@ html[data-theme='dark'] .project-card__cover--icon {
 }
 /* Remove the old text-link middle-dot separators */
 .intro-links a:not(:last-child)::after { content: none; }
+
+/* ============================================================
+   NAVBAR BRAND — smaller, and hidden on the homepage (no duplicate name)
+   ============================================================ */
+.navbar-brand { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+.home .navbar-brand { display: none; }
