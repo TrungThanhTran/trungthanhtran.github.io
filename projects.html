@@ -72,7 +72,7 @@
 
   <!-- Dark mode: apply before paint -->
   <script>
-    (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();
+    (function(){document.documentElement.setAttribute('data-theme','light');})();
   </script>
 </head>
 
@@ -104,12 +104,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="CV.pdf" target="_blank">CV</a>
-          </li>
-          <li class="nav-item">
-            <button id="theme-toggle" title="Toggle dark mode">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-            </button>
           </li>
         </ul>
       </div>

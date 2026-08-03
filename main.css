@@ -1728,12 +1728,14 @@ html[data-theme='dark'] .pillar-icon {
 .prose p{ font-size: 1.18rem; line-height: 1.8; }
 .prose{ max-width: 72ch; }
 
-/* Section labels: quiet uppercase sans */
+/* Section labels: uppercase sans, clearly legible */
 .block-title{
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
+  color: var(--text);
 }
+.block-title::before{ width: 26px; height: 3px; }
 
 /* Selected work: editorial hairline rules between rows */
 .linklist li{
