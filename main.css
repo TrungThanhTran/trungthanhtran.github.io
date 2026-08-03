@@ -2032,3 +2032,17 @@ html[data-theme='dark'] .project-card__cover--icon {
    ============================================================ */
 .navbar-brand { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
 .home .navbar-brand { display: none; }
+
+/* Project card — "My role" line */
+.project-card__role {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.7rem;
+}
+.project-card__role .role-k {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--text);
+  margin-right: 0.35rem;
+}
