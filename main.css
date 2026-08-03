@@ -1815,3 +1815,78 @@ html[data-theme='dark'] .project-card__cover--icon {
 .publications-header h1,
 .projects-header h1,
 .post-title { font-family: Georgia, 'Iowan Old Style', serif; font-weight: 600; }
+
+/* ============================================================
+   INTRO HEADER — photo beside identity (final)
+   ============================================================ */
+.intro { padding: 1.5rem 0 0.5rem; }
+
+.intro-head {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+.intro-id { min-width: 0; }
+
+.intro-photo {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 4px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+.intro-name { margin: 0 0 0.25rem; }
+.intro-tagline { margin: 0; }
+
+@media (max-width: 560px) {
+  .intro-head { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .intro-photo { width: 96px; height: 96px; }
+}
+
+/* ============================================================
+   STANDARDIZE INNER PAGES (Projects / Publications) to homepage system
+   ============================================================ */
+/* Page titles — one size, serif, consistent with homepage scale */
+.projects-header,
+.publications-header { padding: 1.6rem 0 1.25rem; }
+
+.projects-header h1,
+.publications-header h1,
+.post-title {
+  font-family: Georgia, 'Iowan Old Style', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Section labels (publication year dividers) match .block-title */
+.pub-year-header {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text);
+}
+
+/* Item titles — consistent serif sizing */
+.pub-title { font-size: 1.15rem; line-height: 1.4; }
+.project-card__title,
+.project-card__title a { font-size: 1.06rem; line-height: 1.35; }
+
+/* Body / metadata — consistent readable sizes */
+.project-card__desc { font-size: 0.92rem; line-height: 1.6; }
+.pub-authors { font-size: 0.92rem; }
+.pub-venue-text { font-size: 0.9rem; }
+.publications-header .subtitle { font-size: 0.95rem; }
+
+/* Metadata & chips stay sans for crispness */
+.pub-authors, .pub-venue-text,
+.project-card__desc,
+.projects-header p,
+.publications-header .subtitle { font-family: var(--sans); }
