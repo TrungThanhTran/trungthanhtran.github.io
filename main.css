@@ -1962,3 +1962,39 @@ html[data-theme='dark'] .project-card__cover--icon {
   .intro { padding-top: 1.75rem; }
   .intro-photo { width: 120px; height: 120px; }
 }
+
+/* ============================================================
+   EXPERIENCE / NEWS — clean two-column grid alignment (final)
+   ============================================================ */
+.explist { display: block; }
+
+.explist li {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  column-gap: 1.25rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+.explist li:first-child { border-top: none; }
+
+.exp-when {
+  width: auto;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 560px) {
+  .explist li {
+    grid-template-columns: 1fr;
+    row-gap: 0.15rem;
+    padding: 0.6rem 0;
+  }
+}
