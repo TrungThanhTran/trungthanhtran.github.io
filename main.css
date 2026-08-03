@@ -1165,3 +1165,31 @@ html.transition *::after {
   font-size: 0.9rem;
   color: var(--text);
 }
+
+/* ============================================================
+   PROJECT CARD — OUTCOME HIGHLIGHT (use-case result)
+   ============================================================ */
+.project-card__outcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+html[data-theme='dark'] .project-card__outcome {
+  background: rgba(96, 165, 250, 0.12);
+}
+
+.project-card__outcome i {
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
