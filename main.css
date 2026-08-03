@@ -1759,3 +1759,57 @@ html[data-theme='dark'] .pillar-icon {
   color: var(--text-muted);
   letter-spacing: 0.02em;
 }
+
+/* ============================================================
+   CROSS-TAB CONSISTENCY — flat editorial surfaces on warm ground
+   ============================================================ */
+/* Homepage photo: soft ring instead of hard shadow, sits on warm bg */
+.intro-photo {
+  box-shadow: none;
+  border: 1px solid var(--border);
+  padding: 3px;
+  background: var(--bg-alt);
+}
+
+/* Project cards: flat, hairline-bordered panels (no stark white, no heavy shadow) */
+.project-card {
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+.project-card::before { display: none; }
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: none;
+  background: var(--bg-alt);
+  border-color: var(--text-muted);
+}
+
+/* Card cover: warm neutral ground instead of pure white */
+.project-card__cover,
+html[data-theme='dark'] .project-card__cover {
+  background: var(--bg-alt);
+}
+.project-card__cover--icon,
+html[data-theme='dark'] .project-card__cover--icon {
+  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--border) 100%);
+}
+.project-card__cover--icon i { color: var(--accent); opacity: 0.55; }
+
+/* Serif titles on cards to match the editorial homepage */
+.project-card__title,
+.project-card__title a { font-family: Georgia, 'Iowan Old Style', serif; }
+
+/* Publications: soften the heavy dark venue badge into an outline chip */
+.pub-venue {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  font-family: var(--sans);
+}
+.pub-title { font-family: Georgia, 'Iowan Old Style', serif; font-size: 1.05rem; }
+
+/* Section headings across inner pages: serif, consistent with homepage */
+.publications-header h1,
+.projects-header h1,
+.post-title { font-family: Georgia, 'Iowan Old Style', serif; font-weight: 600; }
