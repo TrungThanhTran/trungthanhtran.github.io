@@ -2046,3 +2046,27 @@ html[data-theme='dark'] .project-card__cover--icon {
   color: var(--text);
   margin-right: 0.35rem;
 }
+
+/* ============================================================
+   EXPERIENCE / NEWS — single flowing line (year inline) — FINAL
+   ============================================================ */
+.explist li {
+  display: block;
+  grid-template-columns: none;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+.explist li:first-child { border-top: none; }
+
+.exp-when {
+  display: inline;
+  width: auto;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: 0.55rem;
+  white-space: nowrap;
+}
