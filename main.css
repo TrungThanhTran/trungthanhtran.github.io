@@ -1890,3 +1890,52 @@ html[data-theme='dark'] .project-card__cover--icon {
 .project-card__desc,
 .projects-header p,
 .publications-header .subtitle { font-family: var(--sans); }
+
+/* ============================================================
+   UNIFIED TYPE SCALE — single source of truth for all pages
+   (appended last → overrides earlier ad-hoc sizes)
+   ============================================================ */
+:root{
+  --fs-h1:    2.4rem;    /* page titles */
+  --fs-title: 1.15rem;   /* item titles: papers, project cards, selected work */
+  --fs-body:  1.05rem;   /* primary body & descriptions */
+  --fs-meta:  0.92rem;   /* secondary metadata */
+  --fs-label: 0.95rem;   /* section / year labels */
+  --fs-chip:  0.78rem;   /* tags, badges, small chips */
+}
+
+/* Page titles */
+.projects-header h1,
+.publications-header h1,
+.post-title{ font-size: var(--fs-h1); }
+
+/* Item titles */
+.linklist li a,
+.pub-title,
+.project-card__title,
+.project-card__title a{ font-size: var(--fs-title); line-height: 1.4; }
+
+/* Primary body & descriptions */
+.prose p{ font-size: 1.12rem; }
+.explist li,
+.project-card__desc,
+.pub-authors,
+.pub-abstract{ font-size: var(--fs-body); }
+
+/* Secondary metadata */
+.linklist li span,
+.pub-venue-text,
+.publications-header .subtitle,
+.projects-header p{ font-size: var(--fs-meta); }
+
+/* Section & year labels */
+.block-title,
+.pub-year-header{ font-size: var(--fs-label); }
+
+/* Small chips */
+.project-tag,
+.pub-venue,
+.pub-links a,
+.project-card__org,
+.project-card__year,
+.exp-when{ font-size: var(--fs-chip); }
