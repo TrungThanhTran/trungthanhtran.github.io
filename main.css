@@ -1998,3 +1998,31 @@ html[data-theme='dark'] .project-card__cover--icon {
     padding: 0.6rem 0;
   }
 }
+
+/* ============================================================
+   INTRO LINKS — icon row (final)
+   ============================================================ */
+.intro-links {
+  gap: 0.65rem;
+  align-items: center;
+}
+.intro-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--icon-color);
+  font-size: 1.05rem;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+.intro-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-alt);
+  text-decoration: none;
+}
+/* Remove the old text-link middle-dot separators */
+.intro-links a:not(:last-child)::after { content: none; }
