@@ -2,9 +2,9 @@
    DESIGN TOKENS
    ============================================================ */
 :root {
-  --bg:            #ffffff;
-  --bg-alt:        #f8fafc;
-  --text:          #0f172a;
+  --bg:            #faf9f6;
+  --bg-alt:        #f2f1ec;
+  --text:          #1a1a1a;
   --text-muted:    #64748b;
   --accent:        #2563eb;
   --accent-hover:  #1d4ed8;
@@ -34,9 +34,9 @@
 }
 
 html[data-theme='dark'] {
-  --bg:            #0f172a;
-  --bg-alt:        #1e293b;
-  --text:          #f1f5f9;
+  --bg:            #14151a;
+  --bg-alt:        #1d1f26;
+  --text:          #eceae4;
   --text-muted:    #94a3b8;
   --accent:        #60a5fa;
   --accent-hover:  #93c5fd;
@@ -80,7 +80,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
@@ -1682,4 +1682,80 @@ html[data-theme='dark'] .pillar-icon {
 @media (max-width: 560px) {
   .intro-name { font-size: 2.4rem; }
   .intro-tagline { font-size: 1.25rem; }
+}
+
+/* ============================================================
+   EDITORIAL SERIF DIRECTION (thomwolf-like type, saxon lists)
+   Final overrides — highest precedence.
+   ============================================================ */
+:root{ --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
+/* Keep chrome & small UI chips in a crisp sans */
+.navbar-brand,
+.navbar-nav .nav-link,
+.project-tag, .skill-tag,
+.pub-venue, .news-badge,
+.block-title, .exp-when,
+.intro-links,
+.highlights .hl span,
+.linklist li span,
+.project-card__org, .project-card__year { font-family: var(--sans); }
+
+.navbar-brand { font-weight: 800; letter-spacing: -0.03em; }
+
+/* Homepage headings in Georgia (already the body serif) */
+.intro-name{
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 2.9rem;
+  letter-spacing: -0.015em;
+  line-height: 1.06;
+}
+.intro-tagline{
+  font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.highlights .hl b{
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 1.95rem;
+}
+
+/* Prose: editorial reading rhythm */
+.prose p{ font-size: 1.09rem; line-height: 1.8; }
+.prose{ max-width: 64ch; }
+
+/* Section labels: quiet uppercase sans */
+.block-title{
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+/* Selected work: editorial hairline rules between rows */
+.linklist li{
+  border-top: 1px solid var(--border);
+  padding: 0.7rem 0;
+}
+.linklist li:first-child{ border-top: none; }
+.linklist li a{ font-family: Georgia, serif; font-weight: 600; font-size: 1.12rem; }
+.linklist li span{ font-size: 0.86rem; }
+
+/* Experience / News — saxon.me year-left rows */
+.explist li{
+  border-top: 1px solid var(--border);
+  padding: 0.6rem 0;
+  align-items: baseline;
+  font-size: 1.02rem;
+}
+.explist li:first-child{ border-top: none; }
+.exp-when{
+  width: 104px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
 }
