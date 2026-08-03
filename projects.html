@@ -126,35 +126,117 @@
 
       <ul class="project-grid">
 
-        <!-- Agent Automation — FEATURED -->
+        <!-- Auto Review — FEATURED -->
         <li class="project-card project-card--featured">
-          <div class="project-card__cover project-card__cover--icon">
-            <i class="fas fa-robot"></i>
+          <div class="project-card__cover">
+            <img src="./photos/autoreview.jpg" alt="Auto Review">
           </div>
           <div class="project-card__body">
             <div class="project-card__meta">
-              <span class="project-card__org">Personal</span>
-              <span class="project-card__year">2026–present</span>
+              <span class="project-card__org">Pixta Vietnam</span>
+              <span class="project-card__year">2023–2026</span>
+            </div>
+            <div class="project-card__title">Auto Review — AI-Powered Image Quality Assessment</div>
+            <div class="project-card__desc">
+              Automated quality review across <strong>20+ quality standards</strong>, processing up to
+              <strong>30,000 images/day</strong> with a <strong>70% cost reduction</strong> and
+              <strong>99.5% precision</strong>.
+            </div>
+            <div class="project-card__role"><span class="role-k">My role</span> Led the research direction, model architecture, evaluation and production rollout.</div>
+            <div class="project-card__tags">
+              <span class="project-tag">Computer Vision</span>
+              <span class="project-tag">Deep Learning</span>
+              <span class="project-tag">Lightweight Models</span>
+              <span class="project-tag">Cloud</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- FaceAge -->
+        <li class="project-card">
+          <div class="project-card__cover project-card__cover--icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">ClientScan · Research</span>
+              <span class="project-card__year">2026</span>
             </div>
             <div class="project-card__title">
-              AI Agent Automation — Daily Workflow Engineering
+              <a href="https://huggingface.co/TrungTran/faceage_ClientScan" target="_blank">
+                FaceAge — Scalable Facial Age Estimation
+              </a>
             </div>
             <div class="project-card__desc">
-              A growing suite of AI agents that automate repetitive daily engineering and research tasks —
-              turning hours of manual work into seconds of autonomous execution. Agents handle
-              <strong>automated code review &amp; PR summarisation</strong>, <strong>literature monitoring</strong>
-              (daily ArXiv digest), <strong>meeting preparation</strong>, <strong>data pipeline health checks</strong>, and
-              <strong>report drafting</strong> from raw experiment logs. Built with multi-model orchestration using
-              <strong>Claude Code</strong> and <strong>Gemini</strong>, observability via <strong>Langfuse</strong>,
-              and LLM security guardrails.
+              Face-only age &amp; gender estimation reaching <strong>MAE 3.58 yr on LAGENDA 84k</strong>
+              from a single face crop — beating body-aware MiVOLO v2 (3.86) using public training data only.
+              Built on a <strong>DINOv3-ViT-L/16</strong> backbone with <strong>CORAL ordinal regression</strong>
+              and four-phase progressive fine-tuning. Ranks <strong>#1 among non-LLM methods</strong> on the
+              eight-dataset FaceAge benchmark.
             </div>
+            <div class="project-card__role"><span class="role-k">My role</span> Sole author — dataset, model, benchmark and open-source release.</div>
             <div class="project-card__tags">
-              <span class="project-tag">Agentic AI</span>
-              <span class="project-tag">Claude Code</span>
-              <span class="project-tag">Gemini</span>
-              <span class="project-tag">Langfuse</span>
-              <span class="project-tag">LLM Security</span>
-              <span class="project-tag">Workflow Automation</span>
+              <span class="project-tag">Foundation Models</span>
+              <span class="project-tag">DINOv3</span>
+              <span class="project-tag">Ordinal Regression</span>
+              <span class="project-tag">Age Estimation</span>
+              <span class="project-tag">ONNX</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- ClientScan -->
+        <li class="project-card">
+          <div class="project-card__cover">
+            <img src="./photos/ClientScan.png" alt="ClientScan">
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">ClientScan · Co-founder &amp; AI Architect</span>
+              <span class="project-card__year">Oxford, UK</span>
+            </div>
+            <div class="project-card__title">
+              <a href="https://www.clientscan.co.uk/" target="_blank">
+                ClientScan — Enterprise Facial Recognition
+              </a>
+            </div>
+            <div class="project-card__desc">
+              Full-stack face recognition with <strong>&gt;99.4% accuracy</strong>, <strong>30 FPS</strong>,
+              and <strong>&gt;10,000 identifiers</strong>. Co-developed with Oxford University advisers.
+              Deployed in hospitality and regulated gaming sectors.
+            </div>
+            <div class="project-card__role"><span class="role-k">My role</span> Co-founder — led AI architecture, model development and customer deployment.</div>
+            <div class="project-card__tags">
+              <span class="project-tag">Face Recognition</span>
+              <span class="project-tag">Deep Learning</span>
+              <span class="project-tag">Edge Inference</span>
+              <span class="project-tag">Cloud Architecture</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Learning to Rank -->
+        <li class="project-card">
+          <div class="project-card__cover">
+            <img src="./photos/learning2rank.png" alt="Learning-to-Rank">
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__meta">
+              <span class="project-card__org">Pixta Inc.</span>
+              <span class="project-card__year">2020–2022</span>
+            </div>
+            <div class="project-card__title">Learning-to-Rank — Search Re-Ranking System</div>
+            <div class="project-card__desc">
+              ML re-ranking layer trained on <strong>billions of user signals</strong>, resulting in
+              a <strong>~6% revenue increase (~$30K/month)</strong>. Full MLOps automation from
+              data ingestion to rollout.
+            </div>
+            <div class="project-card__role"><span class="role-k">My role</span> Led the ML re-ranking design, offline/online experimentation and MLOps rollout.</div>
+            <div class="project-card__tags">
+              <span class="project-tag">Information Retrieval</span>
+              <span class="project-tag">LightGBM</span>
+              <span class="project-tag">Active Learning</span>
+              <span class="project-tag">MLOps</span>
             </div>
           </div>
         </li>
@@ -214,60 +296,6 @@
           </div>
         </li>
 
-        <!-- ClientScan -->
-        <li class="project-card">
-          <div class="project-card__cover">
-            <img src="./photos/ClientScan.png" alt="ClientScan">
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__meta">
-              <span class="project-card__org">ClientScan · CTO</span>
-              <span class="project-card__year">Oxford, UK</span>
-            </div>
-            <div class="project-card__title">
-              <a href="https://www.clientscan.co.uk/" target="_blank">
-                ClientScan — Enterprise Facial Recognition
-              </a>
-            </div>
-            <div class="project-card__desc">
-              Full-stack face recognition with <strong>&gt;99.4% accuracy</strong>, <strong>30 FPS</strong>,
-              and <strong>&gt;10,000 identifiers</strong>. Co-developed with Oxford University advisers.
-              Deployed in hospitality and regulated gaming sectors.
-            </div>
-            <div class="project-card__tags">
-              <span class="project-tag">Face Recognition</span>
-              <span class="project-tag">Deep Learning</span>
-              <span class="project-tag">Edge Inference</span>
-              <span class="project-tag">Cloud Architecture</span>
-            </div>
-          </div>
-        </li>
-
-        <!-- Auto Review -->
-        <li class="project-card">
-          <div class="project-card__cover">
-            <img src="./photos/autoreview.jpg" alt="Auto Review">
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__meta">
-              <span class="project-card__org">Pixta Vietnam</span>
-              <span class="project-card__year">2023–2026</span>
-            </div>
-            <div class="project-card__title">Auto Review — AI-Powered Image Quality Assessment</div>
-            <div class="project-card__desc">
-              Automated quality review across <strong>20+ quality standards</strong>, processing up to
-              <strong>30,000 images/day</strong> with a <strong>70% cost reduction</strong> and
-              <strong>99.5% precision</strong>.
-            </div>
-            <div class="project-card__tags">
-              <span class="project-tag">Computer Vision</span>
-              <span class="project-tag">Deep Learning</span>
-              <span class="project-tag">Lightweight Models</span>
-              <span class="project-tag">Cloud</span>
-            </div>
-          </div>
-        </li>
-
         <!-- Image Generation -->
         <li class="project-card">
           <div class="project-card__cover">
@@ -292,27 +320,35 @@
           </div>
         </li>
 
-        <!-- Learning to Rank -->
+        <!-- Agent Automation -->
         <li class="project-card">
-          <div class="project-card__cover">
-            <img src="./photos/learning2rank.png" alt="Learning-to-Rank">
+          <div class="project-card__cover project-card__cover--icon">
+            <i class="fas fa-robot"></i>
           </div>
           <div class="project-card__body">
             <div class="project-card__meta">
-              <span class="project-card__org">Pixta Inc.</span>
-              <span class="project-card__year">2020–2022</span>
+              <span class="project-card__org">Personal</span>
+              <span class="project-card__year">2026–present</span>
             </div>
-            <div class="project-card__title">Learning-to-Rank — Search Re-Ranking System</div>
+            <div class="project-card__title">
+              AI Agent Automation — Daily Workflow Engineering
+            </div>
             <div class="project-card__desc">
-              ML re-ranking layer trained on <strong>billions of user signals</strong>, resulting in
-              a <strong>~6% revenue increase (~$30K/month)</strong>. Full MLOps automation from
-              data ingestion to rollout.
+              A growing suite of AI agents that automate repetitive daily engineering and research tasks —
+              turning hours of manual work into seconds of autonomous execution. Agents handle
+              <strong>automated code review &amp; PR summarisation</strong>, <strong>literature monitoring</strong>
+              (daily ArXiv digest), <strong>meeting preparation</strong>, <strong>data pipeline health checks</strong>, and
+              <strong>report drafting</strong> from raw experiment logs. Built with multi-model orchestration using
+              <strong>Claude Code</strong> and <strong>Gemini</strong>, observability via <strong>Langfuse</strong>,
+              and LLM security guardrails.
             </div>
             <div class="project-card__tags">
-              <span class="project-tag">Information Retrieval</span>
-              <span class="project-tag">LightGBM</span>
-              <span class="project-tag">Active Learning</span>
-              <span class="project-tag">MLOps</span>
+              <span class="project-tag">Agentic AI</span>
+              <span class="project-tag">Claude Code</span>
+              <span class="project-tag">Gemini</span>
+              <span class="project-tag">Langfuse</span>
+              <span class="project-tag">LLM Security</span>
+              <span class="project-tag">Workflow Automation</span>
             </div>
           </div>
         </li>
