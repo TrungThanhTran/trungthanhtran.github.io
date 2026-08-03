@@ -1939,3 +1939,15 @@ html[data-theme='dark'] .project-card__cover--icon {
 .project-card__org,
 .project-card__year,
 .exp-when{ font-size: var(--fs-chip); }
+
+/* ============================================================
+   INTRO — photo on the right (name/tagline left)
+   ============================================================ */
+.intro-head { justify-content: space-between; }
+.intro-id   { flex: 1; order: 1; }
+.intro-photo{ order: 2; }
+
+@media (max-width: 560px) {
+  .intro-head { flex-direction: column; align-items: flex-start; }
+  .intro-photo { order: -1; }   /* photo on top on mobile */
+}
