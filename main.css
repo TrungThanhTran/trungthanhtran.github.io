@@ -2089,3 +2089,60 @@ html[data-theme='dark'] .explist li.news-hot {
 .explist li.news-hot strong { color: var(--accent); }
 /* keep the row after a highlighted one from doubling its top border */
 .explist li.news-hot + li { border-top: none; }
+
+/* ============================================================
+   HOMEPAGE SECTION PANELS + COLLAPSIBLE (details/summary)
+   ============================================================ */
+/* Colored panels for News & Selected Work */
+.block--panel {
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--border);
+  margin-top: 2rem;
+}
+.block--panel-news {
+  background: linear-gradient(135deg, #eef4ff 0%, #e6efff 100%);
+  border-color: #dbe6fb;
+}
+.block--panel-work {
+  background: var(--bg-alt);
+}
+html[data-theme='dark'] .block--panel-news {
+  background: rgba(96, 165, 250, 0.10);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+/* News highlighted item blends into the panel now */
+.explist li.news-hot {
+  background: transparent;
+  border-top: none;
+  padding: 0.55rem 0;
+  margin: 0;
+}
+.explist li.news-hot + li { border-top: 1px solid var(--border); }
+
+/* Collapsible sections (Experience, Media) */
+details.block--fold { margin-top: 2rem; }
+details.block--fold > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  user-select: none;
+}
+details.block--fold > summary::-webkit-details-marker { display: none; }
+/* chevron via the accent bar already on .block-title::before stays; add arrow at end */
+details.block--fold > summary::after {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: auto;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+details.block--fold[open] > summary::after { transform: rotate(-135deg); }
+details.block--fold > summary:hover::after { border-color: var(--accent); }
+details.block--fold > ul { margin-top: 0.9rem; }
