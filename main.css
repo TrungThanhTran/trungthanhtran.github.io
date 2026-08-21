@@ -2070,3 +2070,22 @@ html[data-theme='dark'] .project-card__cover--icon {
   margin-right: 0.55rem;
   white-space: nowrap;
 }
+
+/* ============================================================
+   NEWS — highlighted item (e.g. paper acceptance)
+   ============================================================ */
+.explist li.news-hot {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-top: none;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+html[data-theme='dark'] .explist li.news-hot {
+  background: rgba(96, 165, 250, 0.14);
+}
+.explist li.news-hot .exp-when { color: var(--accent); }
+.explist li.news-hot strong { color: var(--accent); }
+/* keep the row after a highlighted one from doubling its top border */
+.explist li.news-hot + li { border-top: none; }
