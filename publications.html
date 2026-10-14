@@ -460,5 +460,32 @@
     gtag('config', 'G-TVFQHCHQHC');
   </script>
 
+  <!-- Image lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    (function () {
+      var lb = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightbox-img');
+      function open(src, alt) {
+        lbImg.src = src; lbImg.alt = alt || '';
+        lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = ''; lbImg.src = '';
+      }
+      document.querySelectorAll('.pub-cover').forEach(function (img) {
+        img.addEventListener('click', function () { open(img.src, img.alt); });
+      });
+      lb.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) close();
+      });
+    })();
+  </script>
+
 </body>
 </html>
