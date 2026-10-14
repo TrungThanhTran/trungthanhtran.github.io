@@ -2146,3 +2146,26 @@ details.block--fold > summary::after {
 details.block--fold[open] > summary::after { transform: rotate(-135deg); }
 details.block--fold > summary:hover::after { border-color: var(--accent); }
 details.block--fold > ul { margin-top: 0.9rem; }
+
+/* ============================================================
+   PUBLICATIONS — cover thumbnail (book chapters)
+   ============================================================ */
+.pub-item--cover {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+.pub-item--cover .pub-main { flex: 1; min-width: 0; }
+.pub-cover {
+  flex-shrink: 0;
+  width: 74px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  background: #fff;
+}
+@media (max-width: 560px) {
+  .pub-cover { width: 58px; }
+  .pub-item--cover { gap: 0.8rem; }
+}
