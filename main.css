@@ -2169,3 +2169,13 @@ details.block--fold > ul { margin-top: 0.9rem; }
   .pub-cover { width: 58px; }
   .pub-item--cover { gap: 0.8rem; }
 }
+
+/* Publication figure thumbnail (papers) — wider than a book cover */
+.pub-cover--fig {
+  width: 150px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+@media (max-width: 560px) {
+  .pub-cover--fig { width: 108px; }
+}
