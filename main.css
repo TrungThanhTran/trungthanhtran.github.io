@@ -2048,6 +2048,64 @@ html[data-theme='dark'] .project-card__cover--icon {
 }
 
 /* ============================================================
+   PROJECT CARD — Context / Architecture / Role / Impact flow
+   ============================================================ */
+.project-card__flow {
+  margin-bottom: 0.8rem;
+}
+.pc-line {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.4rem;
+}
+.pc-line:last-child { margin-bottom: 0; }
+.pc-line strong { color: var(--text); font-weight: 700; }
+.pc-k {
+  display: inline-block;
+  min-width: 82px;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 0.5rem;
+  vertical-align: baseline;
+}
+
+/* ============================================================
+   HOMEPAGE — secondary positioning line + approach block
+   ============================================================ */
+.intro-tagline-sub {
+  margin: 0.15rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.block--approach { margin-top: 2rem; }
+.approach-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.approach-list li {
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+.approach-list li:first-child { border-top: none; }
+.approach-list .ap-k {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: 0.55rem;
+}
+
+/* ============================================================
    EXPERIENCE / NEWS — single flowing line (year inline) — FINAL
    ============================================================ */
 .explist li {
