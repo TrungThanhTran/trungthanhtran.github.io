@@ -15,14 +15,14 @@
   <meta property="og:description" content="Production AI systems in computer vision, NLP, voice AI, agentic AI, and facial recognition by Trung Thanh Tran.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trungthanhtran.com/projects.html">
-  <meta property="og:image" content="https://trungthanhtran.com/photos/member_trung.jpg">
+  <meta property="og:image" content="https://trungthanhtran.com/photos/og-cover.png">
   <meta property="og:image:alt" content="Trung Thanh Tran — AI Engineering Projects">
   <meta property="og:site_name" content="Trung Thanh Tran">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@TrungTT10">
   <meta name="twitter:title" content="Trung Thanh Tran — AI Engineering Projects">
   <meta name="twitter:description" content="Production AI systems in computer vision, NLP, voice AI, agentic AI, and facial recognition by Trung Thanh Tran.">
-  <meta name="twitter:image" content="https://trungthanhtran.com/photos/member_trung.jpg">
+  <meta name="twitter:image" content="https://trungthanhtran.com/photos/og-cover.png">
 
   <!-- JSON-LD: Projects collection (SEO/GEO) -->
   <script type="application/ld+json">
@@ -151,6 +151,12 @@
               <div class="pc-line"><span class="pc-k">Role</span> Chief architect — set the research direction, designed the model architecture &amp; evaluation, and led the rollout into production.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>70% lower</strong> review cost at <strong>99.5% precision</strong>; now the standing review pipeline in production at Pixta.</div>
             </div>
+            <div class="arch-flow" aria-label="Architecture flow">
+              <span class="arch-stage">Upload · 30K/day</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Lightweight CV models</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">20+ standard checks</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Pass / human escalation</span>
+            </div>
             <div class="project-card__tags">
               <span class="project-tag">Computer Vision</span>
               <span class="project-tag">Deep Learning</span>
@@ -181,6 +187,12 @@
               <div class="pc-line"><span class="pc-k">Decision</span> Face-only over body-aware (MiVOLO) to stay deployable &amp; privacy-safe from a single crop — and still beat it on accuracy.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Sole author — dataset, model, benchmark and open-source release.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>MAE 3.58 yr on LAGENDA 84k</strong>, beating body-aware MiVOLO v2 (3.86); ranks <strong>#1 among non-LLM methods</strong> on the eight-dataset FaceAge benchmark.</div>
+            </div>
+            <div class="arch-flow" aria-label="Architecture flow">
+              <span class="arch-stage">Face crop</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">DINOv3-ViT-L/16</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">CORAL ordinal head</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">ONNX serving</span>
             </div>
             <div class="project-card__tags">
               <span class="project-tag">Foundation Models</span>
@@ -213,6 +225,12 @@
               <div class="pc-line"><span class="pc-k">Decision</span> Split inference across edge &amp; cloud to hold 30 FPS while scaling past 10,000 identities under regulatory constraints.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Co-founder &amp; AI architect — led the AI architecture, model development and customer deployment.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>&gt;99.4% accuracy</strong> in production; deployed across UK hospitality &amp; regulated gaming.</div>
+            </div>
+            <div class="arch-flow" aria-label="Architecture flow">
+              <span class="arch-stage">Camera · edge</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Detect + embed</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Match &gt;10k IDs</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Alert / verify · cloud</span>
             </div>
             <div class="project-card__tags">
               <span class="project-tag">Face Recognition</span>

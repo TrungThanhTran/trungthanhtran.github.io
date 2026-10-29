@@ -2048,6 +2048,37 @@ html[data-theme='dark'] .project-card__cover--icon {
 }
 
 /* ============================================================
+   PROJECT CARD — architecture flow diagram
+   ============================================================ */
+.arch-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.4rem;
+  margin: 0 0 0.85rem;
+  padding: 0.6rem 0.7rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.arch-stage {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.28rem 0.5rem;
+  line-height: 1.25;
+}
+.arch-arrow {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
    PROJECT FILTER CHIPS
    ============================================================ */
 .project-filters {
