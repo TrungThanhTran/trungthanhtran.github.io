@@ -2144,25 +2144,6 @@ html[data-theme='dark'] .project-card__cover--icon {
   color: var(--text-muted);
   line-height: 1.5;
 }
-.block--approach { margin-top: 2rem; }
-.approach-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.approach-list li {
-  padding: 0.55rem 0;
-  border-top: 1px solid var(--border);
-  font-size: var(--fs-body);
-  line-height: 1.6;
-}
-.approach-list li:first-child { border-top: none; }
-.approach-list .ap-k {
-  font-family: var(--sans);
-  font-weight: 700;
-  color: var(--accent);
-  margin-right: 0.55rem;
-}
 
 /* ============================================================
    EXPERIENCE / NEWS — single flowing line (year inline) — FINAL
