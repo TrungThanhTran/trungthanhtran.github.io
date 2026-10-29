@@ -140,6 +140,7 @@
             <div class="project-card__flow">
               <div class="pc-line"><span class="pc-k">Context</span> Manual image QA across <strong>20+ quality standards</strong> couldn't keep up with catalog growth on PixtaStock.</div>
               <div class="pc-line"><span class="pc-k">Architecture</span> Lightweight CV models behind an automated review pipeline on the cloud, scoring up to <strong>30,000 images/day</strong> against every standard before human escalation.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Chose lightweight CV models over a heavy VLM to hold cost &amp; latency at scale — spend accuracy only where it moves a quality standard.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Chief architect — set the research direction, designed the model architecture &amp; evaluation, and led the rollout into production.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>70% lower</strong> review cost at <strong>99.5% precision</strong>; now the standing review pipeline in production at Pixta.</div>
             </div>
@@ -170,6 +171,7 @@
             <div class="project-card__flow">
               <div class="pc-line"><span class="pc-k">Context</span> Estimate age accurately from a <strong>single face crop</strong> — no body context, using public training data only.</div>
               <div class="pc-line"><span class="pc-k">Architecture</span> <strong>DINOv3-ViT-L/16</strong> backbone with <strong>CORAL ordinal regression</strong> and four-phase progressive fine-tuning; exported to <strong>ONNX</strong> for deployment.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Face-only over body-aware (MiVOLO) to stay deployable &amp; privacy-safe from a single crop — and still beat it on accuracy.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Sole author — dataset, model, benchmark and open-source release.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>MAE 3.58 yr on LAGENDA 84k</strong>, beating body-aware MiVOLO v2 (3.86); ranks <strong>#1 among non-LLM methods</strong> on the eight-dataset FaceAge benchmark.</div>
             </div>
@@ -201,6 +203,7 @@
             <div class="project-card__flow">
               <div class="pc-line"><span class="pc-k">Context</span> Regulated hospitality &amp; gaming need reliable, real-time identity verification (e.g. self-excluded gamblers).</div>
               <div class="pc-line"><span class="pc-k">Architecture</span> Full-stack face recognition across edge &amp; cloud — <strong>&gt;10,000 identifiers</strong> at <strong>30 FPS</strong>, co-developed with Oxford University advisers.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Split inference across edge &amp; cloud to hold 30 FPS while scaling past 10,000 identities under regulatory constraints.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Co-founder &amp; AI architect — led the AI architecture, model development and customer deployment.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>&gt;99.4% accuracy</strong> in production; deployed across UK hospitality &amp; regulated gaming.</div>
             </div>
@@ -227,6 +230,7 @@
             <div class="project-card__flow">
               <div class="pc-line"><span class="pc-k">Context</span> Default search ordering left revenue on the table across a large stock-photo catalog.</div>
               <div class="pc-line"><span class="pc-k">Architecture</span> <strong>LightGBM</strong> re-ranking layer trained on <strong>billions of user signals</strong>, with full MLOps automation from data ingestion to rollout.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> A re-ranking layer over existing signals — not an end-to-end search rewrite — for measurable lift at low risk to live search.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Led the re-ranking design, offline/online experimentation and MLOps rollout.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> <strong>~6% revenue lift (~$30K/month)</strong>, running in production at Pixta.</div>
             </div>
@@ -334,6 +338,7 @@
             <div class="project-card__flow">
               <div class="pc-line"><span class="pc-k">Context</span> Repetitive daily engineering &amp; research tasks — reviews, literature, reporting — quietly consume hours.</div>
               <div class="pc-line"><span class="pc-k">Architecture</span> Multi-model agent orchestration with <strong>Claude Code</strong> &amp; <strong>Gemini</strong>, observability via <strong>Langfuse</strong>, and LLM security guardrails.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Multi-model orchestration instead of one provider — route each task to the strongest model, with Langfuse to see what the agents actually do.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Designed and built the agent suite end-to-end.</div>
               <div class="pc-line"><span class="pc-k">Impact</span> Turns hours of manual work into seconds — code review &amp; PR summaries, daily ArXiv digest, meeting prep, pipeline health checks, and report drafting from raw logs.</div>
             </div>
