@@ -124,10 +124,17 @@
         </p>
       </div>
 
+      <div class="project-filters" role="tablist" aria-label="Filter projects by area">
+        <button class="pfilter is-active" data-filter="all" type="button">All</button>
+        <button class="pfilter" data-filter="agentic" type="button">Agentic AI &amp; LLM</button>
+        <button class="pfilter" data-filter="foundation" type="button">Foundation Models &amp; Research</button>
+        <button class="pfilter" data-filter="production" type="button">Production ML at Scale</button>
+      </div>
+
       <ul class="project-grid">
 
         <!-- Auto Review — FEATURED -->
-        <li class="project-card project-card--featured">
+        <li class="project-card project-card--featured" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/autoreview.jpg" alt="Auto Review">
           </div>
@@ -154,7 +161,7 @@
         </li>
 
         <!-- FaceAge -->
-        <li class="project-card">
+        <li class="project-card" data-cat="foundation">
           <div class="project-card__cover project-card__cover--icon">
             <i class="fas fa-user-clock"></i>
           </div>
@@ -186,7 +193,7 @@
         </li>
 
         <!-- ClientScan -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/ClientScan.png" alt="ClientScan">
           </div>
@@ -217,7 +224,7 @@
         </li>
 
         <!-- Learning to Rank -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/learning2rank.png" alt="Learning-to-Rank">
           </div>
@@ -244,7 +251,7 @@
         </li>
 
         <!-- Fatima Fellowship -->
-        <li class="project-card">
+        <li class="project-card" data-cat="foundation">
           <div class="project-card__cover">
             <img src="./photos/fatima.jpeg" alt="Fatima Fellowship">
           </div>
@@ -273,7 +280,7 @@
         </li>
 
         <!-- TakeNote -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover">
             <img src="./photos/TakeNote.png" alt="TakeNote.ai">
           </div>
@@ -299,7 +306,7 @@
         </li>
 
         <!-- Image Generation -->
-        <li class="project-card">
+        <li class="project-card" data-cat="foundation">
           <div class="project-card__cover">
             <img src="./photos/artai.jpg" alt="Image Generation">
           </div>
@@ -323,7 +330,7 @@
         </li>
 
         <!-- Agent Automation -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover project-card__cover--icon">
             <i class="fas fa-robot"></i>
           </div>
@@ -354,7 +361,7 @@
         </li>
 
         <!-- Tag Suggestion -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/tagsuggestion.png" alt="Tag Suggestion">
           </div>
@@ -377,7 +384,7 @@
         </li>
 
         <!-- Face Attribute -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/affectnet.png" alt="Face Attribute Recognition">
           </div>
@@ -401,7 +408,7 @@
         </li>
 
         <!-- Face Recognition -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/facerecognition.png" alt="Face Recognition">
           </div>
@@ -425,7 +432,7 @@
         </li>
 
         <!-- Sorgenia Chatbot -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover">
             <img src="./photos/chatbot.png" alt="Sorgenia Voice Bot">
           </div>
@@ -450,7 +457,7 @@
         </li>
 
         <!-- Panasonic -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover">
             <img src="./photos/conversationalsystem.png" alt="Panasonic Conversational System">
           </div>
@@ -499,6 +506,27 @@
 
   <!-- Dark Mode -->
   <script src="./js/dark_mode.js"></script>
+
+  <!-- Project filter -->
+  <script>
+    (function () {
+      var chips = document.querySelectorAll('.pfilter');
+      var cards = document.querySelectorAll('.project-grid > .project-card');
+      function apply(filter) {
+        cards.forEach(function (card) {
+          var show = filter === 'all' || card.getAttribute('data-cat') === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      }
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('is-active'); });
+          chip.classList.add('is-active');
+          apply(chip.getAttribute('data-filter'));
+        });
+      });
+    })();
+  </script>
 
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVFQHCHQHC"></script>

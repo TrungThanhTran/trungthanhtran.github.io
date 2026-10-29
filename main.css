@@ -2048,6 +2048,37 @@ html[data-theme='dark'] .project-card__cover--icon {
 }
 
 /* ============================================================
+   PROJECT FILTER CHIPS
+   ============================================================ */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.6rem;
+}
+.pfilter {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.38rem 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pfilter:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+.pfilter.is-active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ============================================================
    PROJECT CARD — Context / Architecture / Role / Impact flow
    ============================================================ */
 .project-card__flow {
