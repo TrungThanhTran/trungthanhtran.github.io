@@ -860,8 +860,6 @@ a:hover {
 /* Featured card spans full width */
 .project-card--featured {
   grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: stretch;
 }
 
 /* Cover image — full image visible, never cropped */
@@ -883,10 +881,8 @@ html[data-theme='dark'] .project-card__cover {
 }
 
 .project-card--featured .project-card__cover {
-  width: 200px;
   aspect-ratio: unset;
-  border-bottom: none;
-  border-right: 1px solid var(--border);
+  height: 180px;
 }
 
 .project-card__cover img {

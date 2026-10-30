@@ -147,9 +147,9 @@
             <div class="project-card__flow">
               <div class="pc-line"><span class="pc-k">Context</span> Manual image QA across <strong>20+ quality standards</strong> couldn't keep up with catalog growth on PixtaStock.</div>
               <div class="pc-line"><span class="pc-k">Architecture</span> Lightweight CV models behind an automated review pipeline on the cloud, scoring up to <strong>30,000 images/day</strong> against every standard before human escalation.</div>
-              <div class="pc-line"><span class="pc-k">Decision</span> Chose lightweight CV models over a heavy VLM to hold cost &amp; latency at scale — spend accuracy only where it moves a quality standard.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Chose lightweight CV models over a heavy VLM: at 30K images/day the small accuracy gain didn't justify the extra cost and latency, so I optimised for throughput and kept humans in the loop for edge cases.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Chief architect — set the research direction, designed the model architecture &amp; evaluation, and led the rollout into production.</div>
-              <div class="pc-line"><span class="pc-k">Impact</span> <strong>70% lower</strong> review cost at <strong>99.5% precision</strong>; now the standing review pipeline in production at Pixta.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> <strong>~70% lower</strong> review cost vs. the fully manual baseline, at <strong>99.5% precision</strong> on the model's auto-review decisions; now the standing review pipeline in production at Pixta.</div>
             </div>
             <div class="arch-flow" aria-label="Architecture flow">
               <span class="arch-stage">Upload · 30K/day</span><span class="arch-arrow">→</span>
