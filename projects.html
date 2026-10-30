@@ -15,14 +15,14 @@
   <meta property="og:description" content="Production AI systems in computer vision, NLP, voice AI, agentic AI, and facial recognition by Trung Thanh Tran.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://trungthanhtran.com/projects.html">
-  <meta property="og:image" content="https://trungthanhtran.com/photos/member_trung.jpg">
+  <meta property="og:image" content="https://trungthanhtran.com/photos/og-cover.png">
   <meta property="og:image:alt" content="Trung Thanh Tran — AI Engineering Projects">
   <meta property="og:site_name" content="Trung Thanh Tran">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@TrungTT10">
   <meta name="twitter:title" content="Trung Thanh Tran — AI Engineering Projects">
   <meta name="twitter:description" content="Production AI systems in computer vision, NLP, voice AI, agentic AI, and facial recognition by Trung Thanh Tran.">
-  <meta name="twitter:image" content="https://trungthanhtran.com/photos/member_trung.jpg">
+  <meta name="twitter:image" content="https://trungthanhtran.com/photos/og-cover.png">
 
   <!-- JSON-LD: Projects collection (SEO/GEO) -->
   <script type="application/ld+json">
@@ -41,7 +41,7 @@
         { "@type": "ListItem", "position": 3, "name": "Foundation Models on Edge Devices — efficient memory management for LLMs/LVMs on NVIDIA Jetson" },
         { "@type": "ListItem", "position": 4, "name": "TakeNote.ai — AI meeting assistant with transcription, diarization and summarization" },
         { "@type": "ListItem", "position": 5, "name": "ClientScan — enterprise facial recognition (>99.4% accuracy, 30 FPS)" },
-        { "@type": "ListItem", "position": 6, "name": "Auto Review — AI image quality assessment (30K images/day, 70% lower cost, 99.5% precision)" },
+        { "@type": "ListItem", "position": 6, "name": "Auto Review — AI image quality assessment (30K images/day, 80% lower cost, 99.5% precision)" },
         { "@type": "ListItem", "position": 7, "name": "AI Image Generation — Stable Diffusion for stock photography (LoRA fine-tuning)" },
         { "@type": "ListItem", "position": 8, "name": "Learning-to-Rank — search re-ranking (~6% revenue lift)" },
         { "@type": "ListItem", "position": 9, "name": "Tag Suggestion — large-scale visual auto-annotation (25K+ categories)" },
@@ -120,14 +120,21 @@
       <div class="projects-header">
         <h1>Projects</h1>
         <p style="color:var(--text-muted); font-size:0.92rem; margin-top:0.25rem;">
-          Selected industry research and engineering projects.
+          How I take AI from a business problem to a production system — architecture, flow, my role, and the impact it created. The problems grow in complexity and the stack keeps pace with the field — from CNNs to Vision Transformers, foundation models and agents.
         </p>
+      </div>
+
+      <div class="project-filters" role="tablist" aria-label="Filter projects by area">
+        <button class="pfilter is-active" data-filter="all" type="button">All</button>
+        <button class="pfilter" data-filter="agentic" type="button">Agentic AI &amp; LLM</button>
+        <button class="pfilter" data-filter="foundation" type="button">Foundation Models &amp; Research</button>
+        <button class="pfilter" data-filter="production" type="button">Production ML at Scale</button>
       </div>
 
       <ul class="project-grid">
 
         <!-- Auto Review — FEATURED -->
-        <li class="project-card project-card--featured">
+        <li class="project-card project-card--featured" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/autoreview.jpg" alt="Auto Review">
           </div>
@@ -137,12 +144,19 @@
               <span class="project-card__year">2023–2026</span>
             </div>
             <div class="project-card__title">Auto Review — AI-Powered Image Quality Assessment</div>
-            <div class="project-card__desc">
-              Automated quality review across <strong>20+ quality standards</strong>, processing up to
-              <strong>30,000 images/day</strong> with a <strong>70% cost reduction</strong> and
-              <strong>99.5% precision</strong>.
+            <div class="project-card__flow">
+              <div class="pc-line"><span class="pc-k">Context</span> Manual image QA across <strong>20+ quality standards</strong> couldn't keep up with catalog growth on PixtaStock.</div>
+              <div class="pc-line"><span class="pc-k">Architecture</span> Lightweight CV models behind an automated review pipeline on the cloud, scoring up to <strong>30,000 images/day</strong> against every standard before human escalation.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Chose lightweight CV models over a heavy VLM: at 30K images/day the small accuracy gain didn't justify the extra cost and latency, so I optimised for throughput and kept humans in the loop for edge cases.</div>
+              <div class="pc-line"><span class="pc-k">Role</span> Chief architect — set the research direction, designed the model architecture &amp; evaluation, and led the rollout into production.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> <strong>~80% lower</strong> review cost vs. the fully manual baseline, at <strong>99.5% precision</strong> on the model's auto-review decisions; now the standing review pipeline in production at Pixta.</div>
             </div>
-            <div class="project-card__role"><span class="role-k">My role</span> Led the research direction, model architecture, evaluation and production rollout.</div>
+            <div class="arch-flow" aria-label="Architecture flow">
+              <span class="arch-stage">Upload · 30K/day</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Lightweight CV models</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">20+ standard checks</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Pass / human escalation</span>
+            </div>
             <div class="project-card__tags">
               <span class="project-tag">Computer Vision</span>
               <span class="project-tag">Deep Learning</span>
@@ -153,7 +167,7 @@
         </li>
 
         <!-- FaceAge -->
-        <li class="project-card">
+        <li class="project-card" data-cat="foundation">
           <div class="project-card__cover project-card__cover--icon">
             <i class="fas fa-user-clock"></i>
           </div>
@@ -167,14 +181,19 @@
                 FaceAge — Scalable Facial Age Estimation
               </a>
             </div>
-            <div class="project-card__desc">
-              Face-only age &amp; gender estimation reaching <strong>MAE 3.58 yr on LAGENDA 84k</strong>
-              from a single face crop — beating body-aware MiVOLO v2 (3.86) using public training data only.
-              Built on a <strong>DINOv3-ViT-L/16</strong> backbone with <strong>CORAL ordinal regression</strong>
-              and four-phase progressive fine-tuning. Ranks <strong>#1 among non-LLM methods</strong> on the
-              eight-dataset FaceAge benchmark.
+            <div class="project-card__flow">
+              <div class="pc-line"><span class="pc-k">Context</span> Estimate age accurately from a <strong>single face crop</strong> — no body context, using public training data only.</div>
+              <div class="pc-line"><span class="pc-k">Architecture</span> <strong>DINOv3-ViT-L/16</strong> backbone with <strong>CORAL ordinal regression</strong> and four-phase progressive fine-tuning; exported to <strong>ONNX</strong> for deployment.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Face-only over body-aware (MiVOLO): needs only a single face crop, no full-body image — simpler to deploy, and still beats it on accuracy.</div>
+              <div class="pc-line"><span class="pc-k">Role</span> Sole author — dataset, model, benchmark and open-source release.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> <strong>MAE 3.58 yr on LAGENDA 84k</strong>, beating body-aware MiVOLO v2 (3.86); ranks <strong>#1 among non-LLM methods</strong> on the eight-dataset FaceAge benchmark.</div>
             </div>
-            <div class="project-card__role"><span class="role-k">My role</span> Sole author — dataset, model, benchmark and open-source release.</div>
+            <div class="arch-flow" aria-label="Architecture flow">
+              <span class="arch-stage">Face crop</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">DINOv3-ViT-L/16</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">CORAL ordinal head</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">ONNX serving</span>
+            </div>
             <div class="project-card__tags">
               <span class="project-tag">Foundation Models</span>
               <span class="project-tag">DINOv3</span>
@@ -186,7 +205,7 @@
         </li>
 
         <!-- ClientScan -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/ClientScan.png" alt="ClientScan">
           </div>
@@ -200,12 +219,19 @@
                 ClientScan — Enterprise Facial Recognition
               </a>
             </div>
-            <div class="project-card__desc">
-              Full-stack face recognition with <strong>&gt;99.4% accuracy</strong>, <strong>30 FPS</strong>,
-              and <strong>&gt;10,000 identifiers</strong>. Co-developed with Oxford University advisers.
-              Deployed in hospitality and regulated gaming sectors.
+            <div class="project-card__flow">
+              <div class="pc-line"><span class="pc-k">Context</span> Regulated hospitality &amp; gaming need reliable, real-time identity verification (e.g. self-excluded gamblers).</div>
+              <div class="pc-line"><span class="pc-k">Architecture</span> Full-stack face recognition across edge &amp; cloud — <strong>&gt;10,000 identifiers</strong> at <strong>30 FPS</strong>, co-developed with Oxford University advisers.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Split inference across edge &amp; cloud to hold 30 FPS while scaling past 10,000 identities under regulatory constraints.</div>
+              <div class="pc-line"><span class="pc-k">Role</span> Co-founder &amp; AI architect — led the AI architecture, model development and customer deployment.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> <strong>&gt;99.4% accuracy</strong> in production; deployed across UK hospitality &amp; regulated gaming.</div>
             </div>
-            <div class="project-card__role"><span class="role-k">My role</span> Co-founder — led AI architecture, model development and customer deployment.</div>
+            <div class="arch-flow" aria-label="Architecture flow">
+              <span class="arch-stage">Camera · edge</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Detect + embed</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Match &gt;10k IDs</span><span class="arch-arrow">→</span>
+              <span class="arch-stage">Alert / verify · cloud</span>
+            </div>
             <div class="project-card__tags">
               <span class="project-tag">Face Recognition</span>
               <span class="project-tag">Deep Learning</span>
@@ -216,7 +242,7 @@
         </li>
 
         <!-- Learning to Rank -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/learning2rank.png" alt="Learning-to-Rank">
           </div>
@@ -226,12 +252,13 @@
               <span class="project-card__year">2020–2022</span>
             </div>
             <div class="project-card__title">Learning-to-Rank — Search Re-Ranking System</div>
-            <div class="project-card__desc">
-              ML re-ranking layer trained on <strong>billions of user signals</strong>, resulting in
-              a <strong>~6% revenue increase (~$30K/month)</strong>. Full MLOps automation from
-              data ingestion to rollout.
+            <div class="project-card__flow">
+              <div class="pc-line"><span class="pc-k">Context</span> Default search ordering left revenue on the table across a large stock-photo catalog.</div>
+              <div class="pc-line"><span class="pc-k">Architecture</span> <strong>LightGBM</strong> re-ranking layer trained on <strong>billions of user signals</strong>, with full MLOps automation from data ingestion to rollout.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> A re-ranking layer over existing signals — not an end-to-end search rewrite — for measurable lift at low risk to live search.</div>
+              <div class="pc-line"><span class="pc-k">Role</span> Led the re-ranking design, offline/online experimentation and MLOps rollout.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> <strong>~6% revenue lift (~$30K/month)</strong>, running in production at Pixta.</div>
             </div>
-            <div class="project-card__role"><span class="role-k">My role</span> Led the ML re-ranking design, offline/online experimentation and MLOps rollout.</div>
             <div class="project-card__tags">
               <span class="project-tag">Information Retrieval</span>
               <span class="project-tag">LightGBM</span>
@@ -242,14 +269,14 @@
         </li>
 
         <!-- Fatima Fellowship -->
-        <li class="project-card">
+        <li class="project-card" data-cat="foundation">
           <div class="project-card__cover">
             <img src="./photos/fatima.jpeg" alt="Fatima Fellowship">
           </div>
           <div class="project-card__body">
             <div class="project-card__meta">
               <span class="project-card__org">Fatima Fellowship</span>
-              <span class="project-card__year">2024–present</span>
+              <span class="project-card__year">2024–2025</span>
             </div>
             <div class="project-card__title">
               <a href="https://www.fatimafellowship.com/" target="_blank">
@@ -271,7 +298,7 @@
         </li>
 
         <!-- TakeNote -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover">
             <img src="./photos/TakeNote.png" alt="TakeNote.ai">
           </div>
@@ -297,7 +324,7 @@
         </li>
 
         <!-- Image Generation -->
-        <li class="project-card">
+        <li class="project-card" data-cat="foundation">
           <div class="project-card__cover">
             <img src="./photos/artai.jpg" alt="Image Generation">
           </div>
@@ -321,7 +348,7 @@
         </li>
 
         <!-- Agent Automation -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover project-card__cover--icon">
             <i class="fas fa-robot"></i>
           </div>
@@ -333,14 +360,12 @@
             <div class="project-card__title">
               AI Agent Automation — Daily Workflow Engineering
             </div>
-            <div class="project-card__desc">
-              A growing suite of AI agents that automate repetitive daily engineering and research tasks —
-              turning hours of manual work into seconds of autonomous execution. Agents handle
-              <strong>automated code review &amp; PR summarisation</strong>, <strong>literature monitoring</strong>
-              (daily ArXiv digest), <strong>meeting preparation</strong>, <strong>data pipeline health checks</strong>, and
-              <strong>report drafting</strong> from raw experiment logs. Built with multi-model orchestration using
-              <strong>Claude Code</strong> and <strong>Gemini</strong>, observability via <strong>Langfuse</strong>,
-              and LLM security guardrails.
+            <div class="project-card__flow">
+              <div class="pc-line"><span class="pc-k">Context</span> Repetitive daily engineering &amp; research tasks — reviews, literature, reporting — quietly consume hours.</div>
+              <div class="pc-line"><span class="pc-k">Architecture</span> Multi-model agent orchestration with <strong>Claude Code</strong> &amp; <strong>Gemini</strong>, observability via <strong>Langfuse</strong>, and LLM security guardrails.</div>
+              <div class="pc-line"><span class="pc-k">Decision</span> Multi-model orchestration instead of one provider — route each task to the strongest model, with Langfuse to see what the agents actually do.</div>
+              <div class="pc-line"><span class="pc-k">Role</span> Designed and built the agent suite end-to-end.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> Turns hours of manual work into seconds — code review &amp; PR summaries, daily ArXiv digest, meeting prep, pipeline health checks, and report drafting from raw logs.</div>
             </div>
             <div class="project-card__tags">
               <span class="project-tag">Agentic AI</span>
@@ -354,7 +379,7 @@
         </li>
 
         <!-- Tag Suggestion -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/tagsuggestion.png" alt="Tag Suggestion">
           </div>
@@ -365,8 +390,8 @@
             </div>
             <div class="project-card__title">Tag Suggestion — Large-Scale Visual Auto-Annotation</div>
             <div class="project-card__desc">
-              Multi-label classification model for <strong>25,000+ visual categories</strong> trained on 5M+ samples.
-              Evolved from ResNest → Meshed-Memory Transformer → pure Vision Transformer.
+              Multi-label classification across <strong>25,000+ visual categories</strong> on 5M+ samples —
+              <strong>re-architected three times to keep pace</strong>: ResNest → Meshed-Memory Transformer → pure Vision Transformer.
             </div>
             <div class="project-card__tags">
               <span class="project-tag">Vision Transformer</span>
@@ -377,7 +402,7 @@
         </li>
 
         <!-- Face Attribute -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/affectnet.png" alt="Face Attribute Recognition">
           </div>
@@ -401,7 +426,7 @@
         </li>
 
         <!-- Face Recognition -->
-        <li class="project-card">
+        <li class="project-card" data-cat="production">
           <div class="project-card__cover">
             <img src="./photos/facerecognition.png" alt="Face Recognition">
           </div>
@@ -425,7 +450,7 @@
         </li>
 
         <!-- Sorgenia Chatbot -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover">
             <img src="./photos/chatbot.png" alt="Sorgenia Voice Bot">
           </div>
@@ -450,14 +475,14 @@
         </li>
 
         <!-- Panasonic -->
-        <li class="project-card">
+        <li class="project-card" data-cat="agentic">
           <div class="project-card__cover">
             <img src="./photos/conversationalsystem.png" alt="Panasonic Conversational System">
           </div>
           <div class="project-card__body">
             <div class="project-card__meta">
               <span class="project-card__org">Panasonic R&amp;D Center Vietnam</span>
-              <span class="project-card__year">2017–2018</span>
+              <span class="project-card__year">2015–2018</span>
             </div>
             <div class="project-card__title">Panasonic Core Conversational System</div>
             <div class="project-card__desc">
@@ -499,6 +524,27 @@
 
   <!-- Dark Mode -->
   <script src="./js/dark_mode.js"></script>
+
+  <!-- Project filter -->
+  <script>
+    (function () {
+      var chips = document.querySelectorAll('.pfilter');
+      var cards = document.querySelectorAll('.project-grid > .project-card');
+      function apply(filter) {
+        cards.forEach(function (card) {
+          var show = filter === 'all' || card.getAttribute('data-cat') === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      }
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('is-active'); });
+          chip.classList.add('is-active');
+          apply(chip.getAttribute('data-filter'));
+        });
+      });
+    })();
+  </script>
 
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TVFQHCHQHC"></script>

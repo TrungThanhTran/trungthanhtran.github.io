@@ -860,8 +860,6 @@ a:hover {
 /* Featured card spans full width */
 .project-card--featured {
   grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: stretch;
 }
 
 /* Cover image — full image visible, never cropped */
@@ -883,10 +881,8 @@ html[data-theme='dark'] .project-card__cover {
 }
 
 .project-card--featured .project-card__cover {
-  width: 200px;
   aspect-ratio: unset;
-  border-bottom: none;
-  border-right: 1px solid var(--border);
+  height: 180px;
 }
 
 .project-card__cover img {
@@ -2045,6 +2041,104 @@ html[data-theme='dark'] .project-card__cover--icon {
   font-weight: 700;
   color: var(--text);
   margin-right: 0.35rem;
+}
+
+/* ============================================================
+   PROJECT CARD — architecture flow diagram
+   ============================================================ */
+.arch-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.4rem;
+  margin: 0 0 0.85rem;
+  padding: 0.6rem 0.7rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.arch-stage {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.28rem 0.5rem;
+  line-height: 1.25;
+}
+.arch-arrow {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   PROJECT FILTER CHIPS
+   ============================================================ */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.6rem;
+}
+.pfilter {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.38rem 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.pfilter:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+.pfilter.is-active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ============================================================
+   PROJECT CARD — Context / Architecture / Role / Impact flow
+   ============================================================ */
+.project-card__flow {
+  margin-bottom: 0.8rem;
+}
+.pc-line {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.45rem;
+}
+.pc-line:last-child { margin-bottom: 0; }
+.pc-line strong { color: var(--text); font-weight: 700; }
+.pc-k {
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 0.45rem;
+}
+
+/* ============================================================
+   HOMEPAGE — secondary positioning line
+   ============================================================ */
+.intro-tagline-sub {
+  margin: 0.15rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* ============================================================
