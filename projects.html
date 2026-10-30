@@ -41,7 +41,7 @@
         { "@type": "ListItem", "position": 3, "name": "Foundation Models on Edge Devices — efficient memory management for LLMs/LVMs on NVIDIA Jetson" },
         { "@type": "ListItem", "position": 4, "name": "TakeNote.ai — AI meeting assistant with transcription, diarization and summarization" },
         { "@type": "ListItem", "position": 5, "name": "ClientScan — enterprise facial recognition (>99.4% accuracy, 30 FPS)" },
-        { "@type": "ListItem", "position": 6, "name": "Auto Review — AI image quality assessment (30K images/day, 70% lower cost, 99.5% precision)" },
+        { "@type": "ListItem", "position": 6, "name": "Auto Review — AI image quality assessment (30K images/day, 80% lower cost, 99.5% precision)" },
         { "@type": "ListItem", "position": 7, "name": "AI Image Generation — Stable Diffusion for stock photography (LoRA fine-tuning)" },
         { "@type": "ListItem", "position": 8, "name": "Learning-to-Rank — search re-ranking (~6% revenue lift)" },
         { "@type": "ListItem", "position": 9, "name": "Tag Suggestion — large-scale visual auto-annotation (25K+ categories)" },
@@ -149,7 +149,7 @@
               <div class="pc-line"><span class="pc-k">Architecture</span> Lightweight CV models behind an automated review pipeline on the cloud, scoring up to <strong>30,000 images/day</strong> against every standard before human escalation.</div>
               <div class="pc-line"><span class="pc-k">Decision</span> Chose lightweight CV models over a heavy VLM: at 30K images/day the small accuracy gain didn't justify the extra cost and latency, so I optimised for throughput and kept humans in the loop for edge cases.</div>
               <div class="pc-line"><span class="pc-k">Role</span> Chief architect — set the research direction, designed the model architecture &amp; evaluation, and led the rollout into production.</div>
-              <div class="pc-line"><span class="pc-k">Impact</span> <strong>~70% lower</strong> review cost vs. the fully manual baseline, at <strong>99.5% precision</strong> on the model's auto-review decisions; now the standing review pipeline in production at Pixta.</div>
+              <div class="pc-line"><span class="pc-k">Impact</span> <strong>~80% lower</strong> review cost vs. the fully manual baseline, at <strong>99.5% precision</strong> on the model's auto-review decisions; now the standing review pipeline in production at Pixta.</div>
             </div>
             <div class="arch-flow" aria-label="Architecture flow">
               <span class="arch-stage">Upload · 30K/day</span><span class="arch-arrow">→</span>
