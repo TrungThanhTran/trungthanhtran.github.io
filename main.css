@@ -2309,3 +2309,34 @@ details.block--fold > ul { margin-top: 0.9rem; }
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
   background: #fff;
 }
+
+/* ============================================================
+   PROJECT CARD — resource links (code / demo / website)
+   ============================================================ */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+  margin-top: 0.7rem;
+}
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.project-links a:hover {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.project-links a i { font-size: 0.8em; }
